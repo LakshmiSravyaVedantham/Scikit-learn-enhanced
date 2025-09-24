@@ -259,3 +259,39 @@ subdir('neighbors')
 subdir('preprocessing')
 subdir('svm')
 subdir('tree')
+
+# Enhanced modules
+py.extension_module(
+  '_memory_pool',
+  cython_gen.process('utils/_memory_pool.pyx'),
+  subdir: 'sklearn/utils',
+  install: true
+)
+
+py.extension_module(
+  '_simd_utils',
+  cython_gen.process('utils/_simd_utils.pyx'),
+  subdir: 'sklearn/utils',
+  install: true
+)
+
+py.extension_module(
+  '_cd_fast_enhanced',
+  cython_gen.process('linear_model/_cd_fast_enhanced.pyx'),
+  subdir: 'sklearn/linear_model',
+  install: true
+)
+
+py.extension_module(
+  '_tree_enhanced',
+  cython_gen.process('tree/_tree_enhanced.pyx'),
+  subdir: 'sklearn/tree',
+  install: true
+)
+
+py.extension_module(
+  '_kmeans_enhanced',
+  cython_gen.process('cluster/_kmeans_enhanced.pyx'),
+  subdir: 'sklearn/cluster',
+  install: true
+)

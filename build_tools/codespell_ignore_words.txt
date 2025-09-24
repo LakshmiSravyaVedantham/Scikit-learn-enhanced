@@ -80,3 +80,7 @@ profiling
 parallelism
 threading
 openmp
+noone
+hasnt
+amoungst
+couldnt
